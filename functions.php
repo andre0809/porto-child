@@ -15,6 +15,16 @@ function porto_child_css() {
         wp_enqueue_style( 'styles-child-rtl' );
     }
     if ( function_exists( 'woocommerce_product_search' ) ) {
-    echo woocommerce_product_search( array( 'limit' => 20 ) );
+        echo woocommerce_product_search( array( 'limit' => 20 ) );
   }
+  function porto_child_wps_search_form() {
+    $form = '';
+    if ( class_exists( 'WooCommerce_Product_Search_Field' ) && method_exists( 'WooCommerce_Product_Search_Field', 'get_product_search_form' ) ) {
+        $form = WooCommerce_Product_Search_Field::get_product_search_form( '' );
+    }
+    if ( strlen( $form ) === 0 ) {
+        $form = woocommerce_product_search( array( 'floating' => false, 'dynamic_focus' => false ) );
+    }
+    echo $form;
+}
 }

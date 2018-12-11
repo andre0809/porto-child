@@ -15,3 +15,27 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 @import url("../porto/style.css");
 
 /*************** ADD YOUR CUSTOM CSS HERE  ***************/
+.fusion-main-menu .fusion-main-menu-search .product-search a::after {
+ content: '';
+}
+
+.fusion-main-menu-search .fusion-custom-menu-item-contents {
+	height: 200px;
+	overflow: scroll;
+}
+.fusion-main-menu-search .product-search .product-search-results {
+	/*left: 15px;*/
+}
+.fusion-main-menu-search .product-search .product-search-form input.product-search-field {
+	width: 100%;
+}
+.fusion-main-menu-search .product-search .product-search-field-clear {
+	position: absolute;
+}
+.fusion-main-menu-search .product-search {
+	word-spacing: 0.2em;
+}
+.fusion-logo .product-search img {
+	width: 32px;
+	height: 32px;
+}
